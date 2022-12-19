@@ -59,6 +59,12 @@ namespace WinFormsTpFin
             this.IdProduit = IdProduit;
             this.ModifiedDate = Date;
         }
+
+        public LigneCommande (int id, int quantiter)
+        {
+            this.Id = id;
+            this.Quantiter = quantiter;
+        }
         
         public LigneCommande () { }
     }

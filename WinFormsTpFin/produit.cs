@@ -5,13 +5,12 @@ using System.Text;
 
 namespace WinFormsTpFin
 {
-    class LigneCommande
+    class produit
     {
         private int _id;
-        private int _quantier;
-        private int _prixunitaire;
-        private int _identetecommande;
-        private int _idproduit;
+        private string _Libelle;
+        private string _Reference;
+        private int _PrixUnitaire;
         private DateTime _ModifiedDate;
 
         public int Id
@@ -20,27 +19,21 @@ namespace WinFormsTpFin
             set { _id = value; }
         }
 
-        public int Quantiter
+        public string Libelle
         {
-            get { return _quantier; }
-            set { _quantier = value; }
+            get { return _Libelle; }
+            set { _Libelle = value; }
         }
 
-        public int PrixUnitaire {
-            get { return _prixunitaire;}
-            set { _prixunitaire = value; }
+        public string Reference {
+            get { return _Reference; }
+            set { _Reference = value; }
         }
 
-        public int Identetecommande
+        public int PrixUnitaire
         {
-            get { return _identetecommande;}
-            set { _identetecommande = value; }
-        }
-
-        public int IdProduit
-        {
-            get { return _idproduit;}
-            set { _idproduit = value; }
+            get { return _PrixUnitaire; }
+            set { _PrixUnitaire = value; }
         }
 
         public DateTime ModifiedDate
@@ -50,22 +43,16 @@ namespace WinFormsTpFin
         }
 
 
-        public LigneCommande (int id, int quantier, int prixunitaire, int Identetecommande, int IdProduit, DateTime Date)
+        public produit(int id, string libelle, string reference, int prixunitaire, DateTime Date)
         {
             this.Id = id;
-            this.Quantiter = quantier;
+            this.Libelle = libelle;
+            this.Reference = reference;
             this.PrixUnitaire = prixunitaire;
-            this.Identetecommande = Identetecommande;
-            this.IdProduit = IdProduit;
             this.ModifiedDate = Date;
         }
-        
-        public LigneCommande (int id, int quantier)
-        {
-            this.Id = id;
-            this.Quantiter = quantier;
-        }
        
-        public LigneCommande () { }
+       
+        public produit() { }
     }
 }
